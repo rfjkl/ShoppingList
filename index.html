@@ -10,7 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <header class="desktop-only">
+        <div class="container">
+            <img src="assets/logo.png" alt="">
+        </div>
+    </header>
+    <nav class="container">
+        <a href="#" aria-label="clique para voltar"><img src="assets/voltar.svg" alt="voltar"></a>
+    </nav>
+    <main class="container">
+        <form action="">
+            <fieldset>Compras da semana</fieldset>
+            <div class="fields">
+                <input type="text" name="item" id="item" placeholder="Adicione um novo item">
+                <button type="submit">Adicionar item</button>
+            </div>
+        </form>
+        <ul role="list">
+            <li>
+            <input type="checkbox" name="select" id="select">
+            <span>Pão de forma</span>
+            <a id="removeItem" href="#" aria-label="clique para remover um item">
+                <img src="assets/trash_can_icon.svg" alt="Icone de remover">
+            </a>
+            </li>
+        </ul>
+    </main>
+    <footer class="warning container">
+        <img src="assets/warning_icon.svg" alt="Icone de aviso">
+        <span>O item foi removido da lista</span>
+        <a href="#" id="hideWarning" aria-label="clique para ocultar o aviso">
+            <img src="assets/x_icon.svg" alt="">
+        </a>
+    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>

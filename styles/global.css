@@ -30,6 +30,8 @@
 
 body{
     font: var(--text-p);
+    background-color: var(--bg-color);
+    color: var(--content-secondary);
 }
 
 h1, h2, h3{
@@ -44,4 +46,64 @@ a{
 img{
     max-width: 100%;
     height: auto;
+}
+
+.container{
+    padding-inline: 2rem;
+    margin-inline: auto;
+    max-width: 22rem;
+}
+
+.desktop-only{
+    display: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+nav{
+    margin-top: 5rem;
+}
+
+form{
+    margin-top: 1rem;
+    display: grid;
+    gap: 2.5rem;
+    
+    & fieldset{
+        border: none;
+        font: var(--text-title);
+    }
+
+    & .fields{
+        display: grid;
+        gap: 1rem;
+
+        & input{
+            background-color: var(--bg-secondary);
+            padding: .75rem 1rem;
+            border: 2px solid var(--border-primary);
+            border-radius: 0.75rem;
+            color: var(--content-primary);
+            font: var(--text-p);
+            font-weight: 400;
+
+            &::placeholder{
+                color: var(--content-tertiary);
+            }
+
+            &:hover{
+                border-color: var(--border-hover);
+            }
+
+            &:focus-within{
+                outline: none;
+                border-color: var(--color-brand);
+            }
+        }
+    }
 }
