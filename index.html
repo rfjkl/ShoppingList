@@ -28,20 +28,25 @@
         </form>
         <ul role="list">
             <li>
-            <input type="checkbox" name="select" id="select">
-            <span>Pão de forma</span>
-            <a id="removeItem" href="#" aria-label="clique para remover um item">
-                <img src="assets/trash_can_icon.svg" alt="Icone de remover">
-            </a>
+                <div class="checkboxSquare">
+                    <input type="checkbox" name="select" id="select">
+                </div>
+                <span>Pão de forma</span>
+                <a id="removeItem" href="#" aria-label="clique para remover um item">
+                    <img src="assets/trash_can_icon.svg" alt="Icone de remover">
+                </a>
             </li>
+            
         </ul>
     </main>
     <footer class="warning container">
-        <img src="assets/warning_icon.svg" alt="Icone de aviso">
-        <span>O item foi removido da lista</span>
-        <a href="#" id="hideWarning" aria-label="clique para ocultar o aviso">
-            <img src="assets/x_icon.svg" alt="">
-        </a>
+        <div class="items">
+            <img src="assets/warning_icon.svg" alt="Icone de aviso">
+            <span>O item foi removido da lista</span>
+            <a href="#" id="hideWarning" aria-label="clique para ocultar o aviso">
+                <img src="assets/x_icon.svg" alt="">
+            </a>
+        </div>
     </footer>
     <script src="scripts.js"></script>
 </body>

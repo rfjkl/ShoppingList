@@ -83,7 +83,7 @@ form{
         display: grid;
         gap: 1rem;
 
-        & input{
+        & input[type="text"]{
             background-color: var(--bg-secondary);
             padding: .75rem 1rem;
             border: 2px solid var(--border-primary);
@@ -105,5 +105,93 @@ form{
                 border-color: var(--color-brand);
             }
         }
+
+        & button{
+            background-color: var(--color-brand);
+            border: none;
+            padding: .75rem 1.5rem;
+            border-radius: 0.75rem;
+            font: var(--text-p);
+            color: var(--always-white);
+
+            &:hover, &:focus-within{
+                outline: none;
+                background-color: var(--color-brand-hover);
+            }
+        }
+    }
+}
+
+ul[role="list"]{
+    list-style: none;
+    margin-top: 2.5rem;
+    display: grid;
+    gap: .75rem;
+    
+    & li{
+        height: 3.5rem;
+        background-color: var(--bg-secondary);
+        border-radius: .75rem;
+
+        display: grid;
+        grid-auto-flow: column;
+        align-content: center;
+        align-items: center;
+        justify-content: flex-start;
+        padding: .75rem;
+        grid-template-columns: 1rem 1fr 1rem;
+        gap: .75rem;
+        line-height: 0;
+
+        & .checkboxSquare{
+            background-color: var(--bg-secondary);
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid var(--border-primary);
+            border-radius: 6px;
+            position: relative;
+            & input[type="checkbox"]{
+                position: absolute;
+                z-index: 2;
+                inset: 0;
+                opacity: 0;
+            }
+
+            &:hover, &:focus-within{
+                outline: none;
+                border-color: var(--border-hover);
+            }
+
+            &:has(:checked){
+                background-color: var(--color-brand);
+                border-color: var(--color-brand);
+                &::before{
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: 1;
+                    background: url(../assets/check.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+
+    }
+}
+
+footer{
+    margin-top: 2rem;
+    color: var(--always-white);
+    
+    & .items{
+        padding: .75rem;
+        background-color: var(--color-danger);
+        border-radius: .75rem;
+
+        display: flex;
+        gap: .5rem;
+        line-height: 0;
+        align-items: center;
     }
 }
