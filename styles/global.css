@@ -51,7 +51,7 @@ img{
 .container{
     padding-inline: 2rem;
     margin-inline: auto;
-    max-width: 22rem;
+    max-width: 24rem;
 }
 
 .desktop-only{
@@ -59,10 +59,11 @@ img{
 }
 
 header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1.5rem;
+    & div{
+        margin-top: 1.5rem;
+        margin-inline: auto;
+        width: fit-content;
+    }
 }
 
 nav{
@@ -189,9 +190,29 @@ footer{
         background-color: var(--color-danger);
         border-radius: .75rem;
 
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1.25rem 1fr 1.25rem;
         gap: .5rem;
         line-height: 0;
         align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+@media (width >= 80em) {
+    & .container{
+        padding-inline: 2rem;
+        margin-inline: auto;
+        max-width: 44rem;
+    }
+
+    & .desktop-only{
+        display: initial;
+    }
+
+    & .fields{
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 10rem;
     }
 }
