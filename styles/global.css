@@ -200,6 +200,10 @@ footer{
     }
 }
 
+.hide{
+    display: none;
+}
+
 @media (width >= 80em) {
     & .container{
         padding-inline: 2rem;
